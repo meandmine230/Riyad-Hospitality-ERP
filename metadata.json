@@ -1,0 +1,8 @@
+{
+  "name": "Riyada Hospitality ERP — Saudi Hotel Back Office System",
+  "description": "Enterprise multi-property hotel back-office ERP engineered for the Saudi hospitality sector. Unified General Ledger, AP/AR, Procurement, Inventory & F&B Costing, Treasury, Budgeting, Saudi Labor/GOSI Payroll, PMS/POS Integrations, and ZATCA/MoT compliance with bilingual Arabic/English RTL support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

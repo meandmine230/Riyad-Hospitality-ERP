@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+:root {
+  --primary-navy: #00305D;
+  --primary-navy-dark: #002244;
+  --bg-soft: #F4F6F8;
+  --bg-cool: #EDF0F3;
+  --border-subtle: #DDE3EA;
+}
+
+body {
+  background-color: #F4F6F8;
+  color: #1E293B;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+.font-arabic {
+  font-family: 'Cairo', 'Plus Jakarta Sans', system-ui, sans-serif;
+}

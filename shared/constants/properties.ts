@@ -1,0 +1,43 @@
+import { Property } from '../types';
+
+export const PROPERTIES: Property[] = [
+  {
+    id: 'PROP-RUH-01',
+    code: 'AFR',
+    nameEn: 'Al Faisaliah Grand Luxury Palace, Riyadh',
+    nameAr: 'قصر الفيصلية الفاخر الكبير، الرياض',
+    city: 'Riyadh',
+    cityAr: 'الرياض',
+    keys: 320,
+    starRating: 5,
+    taxRegistrationNumber: '310192847200003',
+    currency: 'SAR',
+    manager: 'Sultan Al-Otaibi',
+  },
+  {
+    id: 'PROP-MAK-02',
+    code: 'ANM',
+    nameEn: 'Al Noor Tower & Hospitality Suites, Makkah',
+    nameAr: 'أبراج النور وأجنحة الضيافة، مكة المكرمة',
+    city: 'Makkah',
+    cityAr: 'مكة المكرمة',
+    keys: 850,
+    starRating: 5,
+    taxRegistrationNumber: '310283940100003',
+    currency: 'SAR',
+    manager: 'Ibrahim Al-Harbi',
+  },
+  {
+    id: 'PROP-JED-03',
+    code: 'CBJ',
+    nameEn: 'Corniche Waterfront Beach Resort, Jeddah',
+    nameAr: 'منتجع كورنيش واجهة جدة الشاطئي',
+    city: 'Jeddah',
+    cityAr: 'جدة',
+    keys: 210,
+    starRating: 5,
+    taxRegistrationNumber: '310394857600003',
+    currency: 'SAR',
+    manager: 'Nouf Al-Ghamdi',
+  },
+];
