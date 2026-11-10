@@ -104,7 +104,7 @@ export const AccountsPayableReceivableView: React.FC = () => {
       </div>
 
       {/* Metrics */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title={language === 'ar' ? 'إجمالي الذمم الدائنة (AP)' : 'Total AP Balance'}
           value={formatCurrency(totalApBalance, language)}
@@ -212,7 +212,7 @@ export const AccountsPayableReceivableView: React.FC = () => {
           </div>
 
           <div className="overflow-x-auto rounded-xl border border-slate-200">
-            <table className="w-full text-left text-xs">
+            <table className="w-full min-w-[760px] text-left text-xs">
               <thead className="bg-[#EDF0F3] text-[#00305D] border-b border-slate-200 font-bold uppercase text-[10px] tracking-wider">
                 <tr>
                   <th className="py-3 px-3">Invoice #</th>
@@ -378,7 +378,7 @@ export const AccountsPayableReceivableView: React.FC = () => {
             </div>
 
             <div className="overflow-x-auto rounded-xl border border-slate-200">
-              <table className="w-full text-left text-xs">
+              <table className="w-full min-w-[800px] text-left text-xs">
                 <thead className="bg-[#EDF0F3] text-[#00305D] border-b border-slate-200 font-bold uppercase text-[10px] tracking-wider">
                   <tr>
                     <th className="py-3 px-3">Invoice #</th>

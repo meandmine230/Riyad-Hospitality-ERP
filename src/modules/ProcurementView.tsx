@@ -101,7 +101,7 @@ export const ProcurementView: React.FC = () => {
       </div>
 
       {/* Metrics */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title={language === 'ar' ? 'أوامر الشراء المعتمدة' : 'Purchase Orders'}
           value={purchaseOrders.length}
@@ -307,7 +307,7 @@ export const ProcurementView: React.FC = () => {
               </div>
 
               <div className="overflow-x-auto rounded-xl border border-slate-200">
-                <table className="w-full text-left text-xs">
+                <table className="w-full min-w-[760px] text-left text-xs">
                   <thead className="bg-[#EDF0F3] text-[#00305D] border-b border-slate-200 font-bold uppercase text-[10px]">
                     <tr>
                       <th className="py-2.5 px-3">Item SKU</th>

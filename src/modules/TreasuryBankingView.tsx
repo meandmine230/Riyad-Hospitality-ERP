@@ -143,7 +143,7 @@ export const TreasuryBankingView: React.FC = () => {
       </div>
 
       {/* Metrics */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title={language === 'ar' ? 'إجمالي السيولة البنكية' : 'Bank Liquidity'}
           value={formatCurrency(totalBankLiquidity, language)}
@@ -292,7 +292,7 @@ export const TreasuryBankingView: React.FC = () => {
 
           {/* Cheque Table */}
           <div className="overflow-x-auto rounded-xl border border-slate-200">
-            <table className="w-full text-xs text-left">
+            <table className="w-full min-w-[760px] text-xs text-left">
               <thead className="bg-[#EDF0F3] text-[#00305D] border-b border-slate-200 text-[10px] font-mono uppercase font-bold">
                 <tr>
                   <th className="py-3 px-3">Cheque #</th>

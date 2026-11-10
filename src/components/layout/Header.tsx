@@ -15,14 +15,22 @@ import {
   ChevronDown,
   Sparkles,
   Zap,
+  Menu,
 } from 'lucide-react';
 
 interface HeaderProps {
   activeModule: string;
   setActiveModule: (mod: string) => void;
+  isMobileNavOpen?: boolean;
+  setIsMobileNavOpen?: (open: boolean) => void;
 }
 
-export const Header: React.FC<HeaderProps> = ({ activeModule, setActiveModule }) => {
+export const Header: React.FC<HeaderProps> = ({
+  activeModule,
+  setActiveModule,
+  isMobileNavOpen,
+  setIsMobileNavOpen,
+}) => {
   const {
     currentPropertyId,
     setCurrentPropertyId,
@@ -66,8 +74,17 @@ export const Header: React.FC<HeaderProps> = ({ activeModule, setActiveModule })
 
   return (
     <header className="h-16 border-b border-[#002244] bg-[#00305D] text-white px-4 lg:px-6 flex items-center justify-between gap-4 sticky top-0 z-40 shadow-md">
-      {/* Left: Luxury Branding, Hotel Switcher & Change Year */}
-      <div className="flex items-center gap-3 lg:gap-4 min-w-0">
+      {/* Left: Hamburger menu toggle (mobile/tablet), Luxury Branding, Hotel Switcher & Change Year */}
+      <div className="flex items-center gap-2 sm:gap-3 lg:gap-4 min-w-0">
+        <button
+          type="button"
+          onClick={() => setIsMobileNavOpen?.(true)}
+          className="lg:hidden p-2 rounded-xl bg-[#002244] hover:bg-[#001b36] text-white border border-white/20 transition cursor-pointer shrink-0 focus:outline-none focus:ring-2 focus:ring-amber-400"
+          aria-label={language === 'ar' ? 'فتح القائمة الجانبية' : 'Open Navigation Menu'}
+        >
+          <Menu className="w-5 h-5 text-amber-300" />
+        </button>
+
         <button
           type="button"
           onClick={() => setActiveModule('overview')}
@@ -91,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({ activeModule, setActiveModule })
         <div className="hidden md:block h-6 w-px bg-white/20" />
 
         {/* Human Hotel Property Switcher */}
-        <div className="flex items-center gap-1.5 bg-[#002244] border border-white/20 rounded-xl px-2.5 py-1.5 text-xs shadow-inner w-40 lg:w-48 shrink-0">
+        <div className="flex items-center gap-1.5 bg-[#002244] border border-white/20 rounded-xl px-2.5 py-1.5 text-xs shadow-inner w-32 sm:w-40 lg:w-48 shrink-0">
           <select
             id="property-selector"
             value={currentPropertyId}

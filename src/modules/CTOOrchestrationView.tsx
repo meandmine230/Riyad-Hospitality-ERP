@@ -77,7 +77,7 @@ export const CTOOrchestrationView: React.FC<{ onNavigate?: (module: string) => v
       </div>
 
       {/* Core Hospitality & Financial Metrics */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title={t.hospitality.revPar}
           value={formatCurrency(756.25, language)}

@@ -611,7 +611,7 @@ export const FinancialReportingView: React.FC = () => {
       </div>
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title={language === 'ar' ? 'إجمالي إيراد الشهر الحالي' : 'MTD Total Revenue'}
           value={formatCurrency(totalRevMTD, language)}
@@ -704,7 +704,7 @@ export const FinancialReportingView: React.FC = () => {
 
           {/* Master 13-Column Table */}
           <div className="overflow-x-auto rounded-xl border border-slate-200 shadow-sm">
-            <table className="w-full text-xs text-left border-collapse">
+            <table className="w-full min-w-[1100px] text-xs text-left border-collapse">
               <thead>
                 {/* Top Section Header */}
                 <tr className="bg-[#EDF0F3] text-[#00305D] border-b border-slate-300 text-[11px] font-bold text-center">
@@ -866,7 +866,7 @@ export const FinancialReportingView: React.FC = () => {
           </div>
 
           <div className="overflow-x-auto rounded-xl border border-slate-200">
-            <table className="w-full text-left text-xs">
+            <table className="w-full min-w-[650px] text-left text-xs">
               <thead className="bg-[#EDF0F3] text-[#00305D] border-b border-slate-200 text-[10px] uppercase font-bold">
                 <tr>
                   <th className="py-3 px-3">Revenue Category</th>

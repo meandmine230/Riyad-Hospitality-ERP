@@ -199,7 +199,7 @@ export const HotelIntegrationView: React.FC = () => {
       </div>
 
       {/* Metrics */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <MetricCard
           title={t.hospitality.revPar}
           value={latestBatch ? formatCurrency(latestBatch.revParSAR, language) : '—'}

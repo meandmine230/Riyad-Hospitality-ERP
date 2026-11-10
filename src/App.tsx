@@ -21,6 +21,7 @@ import { DevOpsSystemView } from './modules/DevOpsSystemView';
 
 const MainLayout: React.FC = () => {
   const [activeModule, setActiveModule] = useState<string>('overview');
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState<boolean>(false);
   const { language } = useERP();
 
   const renderActiveModule = () => {
@@ -60,12 +61,22 @@ const MainLayout: React.FC = () => {
         language === 'ar' ? 'font-arabic' : 'font-sans'
       }`}
     >
-      <Header activeModule={activeModule} setActiveModule={setActiveModule} />
+      <Header
+        activeModule={activeModule}
+        setActiveModule={setActiveModule}
+        isMobileNavOpen={isMobileNavOpen}
+        setIsMobileNavOpen={setIsMobileNavOpen}
+      />
 
-      <div className="flex-1 flex overflow-hidden">
-        <Sidebar activeModule={activeModule} setActiveModule={setActiveModule} />
+      <div className="flex-1 flex overflow-hidden relative">
+        <Sidebar
+          activeModule={activeModule}
+          setActiveModule={setActiveModule}
+          isMobileNavOpen={isMobileNavOpen}
+          setIsMobileNavOpen={setIsMobileNavOpen}
+        />
 
-        <main className="flex-1 overflow-y-auto p-4 sm:p-6 lg:p-8 bg-[#F4F6F8]">
+        <main className="flex-1 overflow-y-auto p-3 sm:p-5 lg:p-8 bg-[#F4F6F8]">
           <div className="max-w-7xl mx-auto">{renderActiveModule()}</div>
         </main>
       </div>
